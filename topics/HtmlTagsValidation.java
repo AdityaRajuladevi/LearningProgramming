@@ -10,6 +10,7 @@ public class HtmlTagsValidation {
 		String inp="<h1><h1><h2>Sanjay has no</h2><h5> watch </h5></h1></h1><par>So wait for a while</par>";
 		String regex="<(\\w+)>(.+)<\\/(\\1)>";
 		Pattern pattern = Pattern.compile(regex);
+		
 		validateTag(inp,pattern);
 		//val(regex);
 
