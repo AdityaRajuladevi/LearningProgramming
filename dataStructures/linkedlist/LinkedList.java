@@ -1,4 +1,4 @@
-package dataStructures.linkedlist;
+package LearningProgramming.dataStructures.linkedlist;
 
 import java.util.List;
 

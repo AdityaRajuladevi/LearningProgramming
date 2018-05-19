@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 import java.util.Scanner;
 
 public class FactorialDP {

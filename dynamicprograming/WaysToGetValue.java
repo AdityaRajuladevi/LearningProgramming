@@ -1,4 +1,4 @@
-package dynamicprograming;
+package LearningProgramming.dynamicprograming;
 
 public class WaysToGetValue {
 

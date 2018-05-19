@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package interview;
+package LearningProgramming.interview;
 
 import java.io.BufferedReader;
 import java.io.IOException;

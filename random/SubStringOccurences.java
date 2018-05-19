@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public class SubStringOccurences {
 
 	private static int subStringOccurences(String str, String substr)

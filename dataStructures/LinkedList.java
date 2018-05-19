@@ -1,4 +1,4 @@
-package dataStructures;
+package LearningProgramming.dataStructures;
 
 public class LinkedList {
 	

@@ -1,4 +1,4 @@
-package thirtydaystocode;
+package LearningProgramming.thirtydaystocode;
 import java.io.*;
 import java.util.*;
 public class Day6Strings {

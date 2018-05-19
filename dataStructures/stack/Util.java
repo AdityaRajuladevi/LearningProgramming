@@ -1,4 +1,4 @@
-package dataStructures.stack;
+package LearningProgramming.dataStructures.stack;
 
 public class Util {
 	static int performOperation(int op1, int op2, String operator)

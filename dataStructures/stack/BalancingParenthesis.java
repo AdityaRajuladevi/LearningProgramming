@@ -1,4 +1,4 @@
-package dataStructures.stack;
+package LearningProgramming.dataStructures.stack;
 
 import java.util.ArrayList;
 import java.util.HashMap;

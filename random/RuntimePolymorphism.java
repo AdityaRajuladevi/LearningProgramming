@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public class RuntimePolymorphism {
 	public static void main(String[] args)
 	{

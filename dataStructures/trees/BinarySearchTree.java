@@ -1,4 +1,4 @@
-package dataStructures.trees;
+package LearningProgramming.dataStructures.trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,6 +19,9 @@ public class BinarySearchTree {
 	    add(7);
 	    add(9);
 		traverseTreeBFS(root);
+		recursivePreOrder(root);
+		System.out.println("");
+		identifyLeaves(root);
 	}
 
 	static void add(int value)
@@ -63,6 +66,49 @@ public class BinarySearchTree {
 		}
 		
 		System.out.println(sb.toString().trim());
+	}
+
+	static void recursivePreOrder(Node root)
+	{
+		if(root==null)
+			return;
+		else{
+			System.out.print(root.value+" ");
+			if(root.left!=null)
+				recursivePreOrder(root.left);
+			if(root.right!=null)
+				recursivePreOrder(root.right);
+		}
+	}
+
+	static void identifyLeaves(Node root)
+	{
+		if(root == null)
+			{
+				System.out.println("Tree is empty");
+				return ;
+			}
+		else{
+			if(root.left==null && root.right==null)
+			{
+				System.out.print(root.value+" ");
+				return;
+			}
+			else 
+			{
+
+			
+				if(root.left!=null)
+			{
+				identifyLeaves(root.left);
+			}	
+			    if(root.right!=null)
+			{
+				identifyLeaves(root.right);
+			}
+		}
+		}
+				
 	}
 }
 

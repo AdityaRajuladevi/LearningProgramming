@@ -1,4 +1,4 @@
-package sorting;
+package LearningProgramming.sorting;
 
 import java.util.Arrays;
 import java.util.Random;

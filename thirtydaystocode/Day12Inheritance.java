@@ -1,4 +1,4 @@
-package thirtydaystocode;
+package LearningProgramming.thirtydaystocode;
 
 public class Day12Inheritance {
 	public static void main(String args[])

@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public abstract class InterfaceProblems implements sub
 {
 	@Override

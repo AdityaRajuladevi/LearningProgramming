@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public class Enums {
 
 	public enum PizzaStatus{

@@ -1,4 +1,4 @@
-package interview;
+package LearningProgramming.interview;
 
 public class LengthOfShortestRepetition {
 

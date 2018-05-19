@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public class TestingCode {
 
 	static String abc="Default";

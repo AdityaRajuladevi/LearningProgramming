@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 public class TrigonometricFunctions {
 	public static double sin(double radians) {
 		double term = 1.0;

@@ -1,4 +1,4 @@
-package collections;
+package LearningProgramming.collections;
 
 import java.util.Collections;
 import java.util.HashMap;

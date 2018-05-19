@@ -1,4 +1,4 @@
-package dynamicprograming;
+package LearningProgramming.dynamicprograming;
 
 import java.util.Scanner;
 

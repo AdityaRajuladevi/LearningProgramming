@@ -1,4 +1,4 @@
-package random;
+package LearningProgramming.random;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package thirtydaystocode;
+package LearningProgramming.thirtydaystocode;
 
 import java.util.Scanner;
 
