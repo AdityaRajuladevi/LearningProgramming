@@ -82,6 +82,49 @@ public class LinkedList {
 		current.next=null;
 		
 	}
+
+	static void reverseInInterval(int m, int n, Node head)
+	{
+		if(m==n)
+		return ;
+		Node current = head;
+		Node mNode=null;
+		Node nNode =null;
+		Node nNodeNext =null;
+		Node mNodePrev=head;
+		int counter=1;
+		Node t=head;
+		while(current!=null && counter <=n)
+		{	
+			if(counter<m)
+			{
+				mNodePrev =t;
+			}
+			else if(counter ==m)
+			{
+				mNode=current;
+			}
+			else if(counter==n)
+			{
+				nNode =current;
+				nNodeNext=current.next;
+			}
+			t=current;
+			current = current.next;
+			counter++;
+		}
+		nNode.next = null;
+		Node h=reverseIterative(mNode);
+		if(m==1)
+		{
+			head = h;
+		}
+		else
+		mNodePrev.next = h;
+		mNode.next = nNodeNext;
+		display(head);
+		System.out.println("Something");
+	}
 	
 	
 	public static void main(String[] args) {
@@ -94,19 +137,115 @@ public class LinkedList {
 			int data= arr[i];
 			head=insert( head,data);
 		}
-		display(head);
-		revDisplay(head);	
-		HEAD=head;
-		reverseRecursive(HEAD);
-		System.out.println("\nRecursive sorted");
-		display(HEAD);
+		// display(head);
+		// revDisplay(head);	
+		// HEAD=head;
+		// reverseRecursive(HEAD);
+		// System.out.println("\nRecursive sorted");
+		// display(HEAD);
 		//head=reverseIterative(head);
 		//display(head);
+		//reverseInInterval(2, 3, head);
+		getMiddleNode(head);
+		//Node k=middleNode(head);
+		//System.out.println("Middle = "+k.value);
+
+		//sortList(head);
+		display(head);
 	}
 
+	public static Node getMiddleNode (Node head)
+	{
+		Node fastNode= head;
+		Node slowNode = head;
+		while(fastNode!=null && fastNode.next!=null)
+		{
+			fastNode=fastNode.next.next;
+			slowNode=slowNode.next;
+		}
+		System.out.println("Middle Node " + slowNode.value);
+		return slowNode;
+	}
+
+	public static Node middleNode(Node head) {
+        int size=0;
+        Node current = head;
+        if(current == null)
+            return head;
+        size =0;
+        while(current!=null)
+        {
+            size+=1;
+            current=current.next;
+        }
+        int middle =size/2 +1;
+        // if(size%2==0)
+        // {
+        //    middle = size/2 +1 ;
+        // }
+        // else 
+        //     middle = size/2;
+            
+		current = head;
+		middle-=1;
+        while(middle>0)
+        {
+            current = current.next;
+            middle--;
+        }
+        return current;
+    }
+
+
+
+public static Node sortList(Node head) {
+		if (head == null || head.next==null)
+		{
+			return head;
+		}
+		Node fast=head, slow=head,prev=null;
+		while(fast!=null && fast.next!=null)
+		{
+			prev= slow;
+			slow=slow.next;
+			fast = fast.next.next;
+		}
+		prev.next =null;
+		Node l=sortList(head);
+		Node r=sortList(slow);
+		return mergeList(l, r);
+	}
+
+	public static Node mergeList(Node l, Node r)
+	{
+		Node k= new Node(0,null);
+		Node s=k;
+		while(l!=null && r!=null)
+		{
+			if(l.value<=r.value)
+			{
+				k.next = l;
+				k=k.next;
+				l=l.next;
+			}
+			else{
+				k.next = r;
+				k=k.next;
+				r=r.next;
+			}
+		}
+		if(l!=null)
+		{
+			k.next = l;
+		}
+		
+			if(r!=null)
+		{
+			k.next = r;
+		}
+		return s.next;
+	}
 }
-
-
 class Node{
 	int value;
 	Node next;

@@ -11,7 +11,6 @@ public class MergeSort {
 		System.out.println("Before Sorting : " + Arrays.toString(ARR));
 		mergeSort(ARR,0,ARR.length-1);
 		System.out.println("After Sorting : " + Arrays.toString(ARR));
-
 		System.out.println("== On Random Array ==");
 		int[] randArray = new Random().ints(10, 1, 100).toArray();
 		System.out.println("Before Sorting : " + Arrays.toString(randArray));

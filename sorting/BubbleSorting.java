@@ -27,6 +27,7 @@ static int[] ARR= new int[]{1,7,5,6,6,4,5};
 		a[j]=t;
 	}
 	
+	// Always remember to bubble the largest value to the end after each iteration
 	public static void bubbleSort(int[] arr)
 	{
 		
